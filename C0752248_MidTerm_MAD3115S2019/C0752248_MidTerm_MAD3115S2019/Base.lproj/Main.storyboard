@@ -162,12 +162,76 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableViewCustomers" destination="bMB-Of-r4I" id="Ef0-P9-OcU"/>
+                        <segue destination="2xk-tx-kHv" kind="show" identifier="showDetails" id="Toe-gd-aWl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XU8-Pi-6Nu" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="DD8-tl-psu" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2813" y="130"/>
+            <point key="canvasLocation" x="2594" y="130"/>
+        </scene>
+        <!--Customer Bill View Controller-->
+        <scene sceneID="u8E-Al-Cqo">
+            <objects>
+                <viewController storyboardIdentifier="CustomerBillViewController" id="2xk-tx-kHv" customClass="CustomerBillViewController" customModule="C0752248_MidTerm_MAD3115S2019" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YGS-k5-las">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1co-e0-t8q">
+                                <rect key="frame" x="0.0" y="329" width="414" height="567"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="3f0-mF-BUu">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3f0-mF-BUu" id="1kM-TI-Tf6">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Customer Id :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wy1-Ww-3Rd">
+                                <rect key="frame" x="20" y="108" width="374" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Customer Name :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jmf-mL-eCp">
+                                <rect key="frame" x="20" y="140" width="152" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total Amount :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iSS-1d-3Vi">
+                                <rect key="frame" x="20" y="172" width="125" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1co-e0-t8q" firstAttribute="top" secondItem="zhU-bz-QCL" secondAttribute="top" constant="285" id="4J8-qb-4JP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zhU-bz-QCL"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="fip-uu-7b3">
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="afW-DC-uUW"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="lblCustomerId" destination="wy1-Ww-3Rd" id="QIS-jS-Npe"/>
+                        <outlet property="lblCustomerName" destination="jmf-mL-eCp" id="1wd-I7-xiQ"/>
+                        <outlet property="lblTotal" destination="iSS-1d-3Vi" id="7PK-ac-Qk3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qd6-A0-DhU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3386" y="130"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HJZ-qX-lyZ">

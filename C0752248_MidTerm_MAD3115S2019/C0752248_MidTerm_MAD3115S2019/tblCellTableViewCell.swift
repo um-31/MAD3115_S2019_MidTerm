@@ -9,15 +9,16 @@
 import UIKit
 
 class tblCellTableViewCell: UITableViewCell {
-
     
+    var custID: Int = 0
     @IBOutlet weak var lblCustomerName: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    func setLable(customer: Customer){
+    func setLable(customer: Customer) {
+        custID = customer.customerId!
         lblCustomerName.text = customer.fullName
     }
 }
