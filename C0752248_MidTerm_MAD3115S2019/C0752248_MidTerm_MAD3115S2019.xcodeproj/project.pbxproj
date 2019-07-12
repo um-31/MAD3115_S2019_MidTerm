@@ -13,6 +13,7 @@
 		FB27FF0422D7EFB000735058 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB27FF0322D7EFB000735058 /* Assets.xcassets */; };
 		FB27FF0722D7EFB000735058 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB27FF0522D7EFB000735058 /* LaunchScreen.storyboard */; };
 		FB27FF0F22D7F7E300735058 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB27FF0E22D7F7E300735058 /* SplashViewController.swift */; };
+		FB27FF1122D7FFEA00735058 /* BillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB27FF1022D7FFEA00735058 /* BillViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FB27FF0622D7EFB000735058 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB27FF0822D7EFB000735058 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB27FF0E22D7F7E300735058 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		FB27FF1022D7FFEA00735058 /* BillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				FB27FEFE22D7EFAE00735058 /* ViewController.swift */,
 				FB27FF0E22D7F7E300735058 /* SplashViewController.swift */,
 				FB27FF0022D7EFAE00735058 /* Main.storyboard */,
+				FB27FF1022D7FFEA00735058 /* BillViewController.swift */,
 				FB27FF0322D7EFB000735058 /* Assets.xcassets */,
 				FB27FF0522D7EFB000735058 /* LaunchScreen.storyboard */,
 				FB27FF0822D7EFB000735058 /* Info.plist */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB27FF0F22D7F7E300735058 /* SplashViewController.swift in Sources */,
+				FB27FF1122D7FFEA00735058 /* BillViewController.swift in Sources */,
 				FB27FEFF22D7EFAE00735058 /* ViewController.swift in Sources */,
 				FB27FEFD22D7EFAE00735058 /* AppDelegate.swift in Sources */,
 			);
