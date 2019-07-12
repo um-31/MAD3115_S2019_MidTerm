@@ -26,3 +26,15 @@ class CustomerBillViewController: UIViewController {
 
 
 }
+extension CustomerBillViewController : UITableViewDataSource, UITableViewDelegate{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return (cust?.arrayBills!.count)!
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let billArray = cust?.arrayBills![indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "billIdentifier", for: indexPath) as! 
+    }
+    
+    
+}
