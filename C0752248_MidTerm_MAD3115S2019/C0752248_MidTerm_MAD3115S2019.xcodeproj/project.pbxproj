@@ -15,6 +15,14 @@
 		FB27FF0F22D7F7E300735058 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB27FF0E22D7F7E300735058 /* SplashViewController.swift */; };
 		FB27FF1122D7FFEA00735058 /* BillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB27FF1022D7FFEA00735058 /* BillViewController.swift */; };
 		FB27FF1522D8151100735058 /* Users.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB27FF1422D8151100735058 /* Users.plist */; };
+		FB27FF1822D842CF00735058 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB27FF1722D842CF00735058 /* main.swift */; };
+		FB27FF1F22D842E200735058 /* Hydro.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB27FF1922D842E200735058 /* Hydro.swift */; };
+		FB27FF2022D842E200735058 /* Internet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB27FF1A22D842E200735058 /* Internet.swift */; };
+		FB27FF2122D842E200735058 /* IDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB27FF1B22D842E200735058 /* IDisplay.swift */; };
+		FB27FF2222D842E200735058 /* Mobile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB27FF1C22D842E200735058 /* Mobile.swift */; };
+		FB27FF2322D842E200735058 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB27FF1D22D842E200735058 /* Customer.swift */; };
+		FB27FF2422D842E200735058 /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB27FF1E22D842E200735058 /* Bill.swift */; };
+		FB27FF2622D8430200735058 /* Extention in Resources */ = {isa = PBXBuildFile; fileRef = FB27FF2522D8430200735058 /* Extention */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +35,14 @@
 		FB27FF0E22D7F7E300735058 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		FB27FF1022D7FFEA00735058 /* BillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillViewController.swift; sourceTree = "<group>"; };
 		FB27FF1422D8151100735058 /* Users.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Users.plist; sourceTree = "<group>"; };
+		FB27FF1722D842CF00735058 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		FB27FF1922D842E200735058 /* Hydro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hydro.swift; sourceTree = "<group>"; };
+		FB27FF1A22D842E200735058 /* Internet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Internet.swift; sourceTree = "<group>"; };
+		FB27FF1B22D842E200735058 /* IDisplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDisplay.swift; sourceTree = "<group>"; };
+		FB27FF1C22D842E200735058 /* Mobile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mobile.swift; sourceTree = "<group>"; };
+		FB27FF1D22D842E200735058 /* Customer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
+		FB27FF1E22D842E200735058 /* Bill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
+		FB27FF2522D8430200735058 /* Extention */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Extention; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +75,7 @@
 		FB27FEFB22D7EFAE00735058 /* C0752248_MidTerm_MAD3115S2019 */ = {
 			isa = PBXGroup;
 			children = (
+				FB27FF1622D8419300735058 /* Classes */,
 				FB27FEFC22D7EFAE00735058 /* AppDelegate.swift */,
 				FB27FEFE22D7EFAE00735058 /* ViewController.swift */,
 				FB27FF0E22D7F7E300735058 /* SplashViewController.swift */,
@@ -69,6 +86,21 @@
 				FB27FF1422D8151100735058 /* Users.plist */,
 			);
 			path = C0752248_MidTerm_MAD3115S2019;
+			sourceTree = "<group>";
+		};
+		FB27FF1622D8419300735058 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				FB27FF2522D8430200735058 /* Extention */,
+				FB27FF1722D842CF00735058 /* main.swift */,
+				FB27FF1E22D842E200735058 /* Bill.swift */,
+				FB27FF1D22D842E200735058 /* Customer.swift */,
+				FB27FF1922D842E200735058 /* Hydro.swift */,
+				FB27FF1B22D842E200735058 /* IDisplay.swift */,
+				FB27FF1A22D842E200735058 /* Internet.swift */,
+				FB27FF1C22D842E200735058 /* Mobile.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,6 +164,7 @@
 				FB27FF0722D7EFB000735058 /* LaunchScreen.storyboard in Resources */,
 				FB27FF0422D7EFB000735058 /* Assets.xcassets in Resources */,
 				FB27FF1522D8151100735058 /* Users.plist in Resources */,
+				FB27FF2622D8430200735058 /* Extention in Resources */,
 				FB27FF0222D7EFAE00735058 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,9 +176,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB27FF2222D842E200735058 /* Mobile.swift in Sources */,
+				FB27FF2422D842E200735058 /* Bill.swift in Sources */,
+				FB27FF2322D842E200735058 /* Customer.swift in Sources */,
+				FB27FF2122D842E200735058 /* IDisplay.swift in Sources */,
 				FB27FF0F22D7F7E300735058 /* SplashViewController.swift in Sources */,
+				FB27FF1822D842CF00735058 /* main.swift in Sources */,
 				FB27FF1122D7FFEA00735058 /* BillViewController.swift in Sources */,
+				FB27FF2022D842E200735058 /* Internet.swift in Sources */,
 				FB27FEFF22D7EFAE00735058 /* ViewController.swift in Sources */,
+				FB27FF1F22D842E200735058 /* Hydro.swift in Sources */,
 				FB27FEFD22D7EFAE00735058 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
