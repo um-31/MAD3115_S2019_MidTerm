@@ -112,6 +112,28 @@
                     <view key="view" contentMode="scaleToFill" id="LWM-yP-FfG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oqy-2i-TCN">
+                                <rect key="frame" x="169" y="249" width="76" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ovp-dN-Lru">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="C2c-0x-GF4">
+                                        <barButtonItem key="rightBarButtonItem" title="Logout" id="d6k-xg-J3O">
+                                            <connections>
+                                                <segue destination="DD8-tl-psu" kind="unwind" unwindAction="unWindLogoutFromAnyScreenWithStoryboardSegue:" id="hBq-ef-lJa"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="fH5-gd-Hf4"/>
                     </view>
@@ -120,8 +142,9 @@
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XU8-Pi-6Nu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="DD8-tl-psu" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3502.898550724638" y="129.91071428571428"/>
+            <point key="canvasLocation" x="2603" y="130"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HJZ-qX-lyZ">
@@ -140,24 +163,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PVG-nP-gv2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="892.75362318840587" y="129.91071428571428"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="7MO-Pc-feR">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BfM-cR-NN0" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xUH-Tj-mEc">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="vaK-4k-dkh" kind="relationship" relationship="rootViewController" id="f7a-XN-agb"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zqw-Kh-gEn" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2592.753623188406" y="129.91071428571428"/>
         </scene>
     </scenes>
 </document>
