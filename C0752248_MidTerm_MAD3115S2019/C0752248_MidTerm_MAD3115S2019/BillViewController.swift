@@ -10,12 +10,16 @@ import UIKit
 
 class BillViewController: UIViewController {
 
+    @IBOutlet weak var tblCustomers: UITableView!
+    var customers = [Customer]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
 
         // Do any additional setup after loading the view.
     }
+    
     
     
     
