@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Customer: IDisplay{
+class Customer: Bill{
     
     let customerId: Int?
     var firstName: String?
@@ -26,43 +26,13 @@ class Customer: IDisplay{
         return Total
     }
     
-    init(customerId: Int,firstName: String,lastName: String,email: String,arrayBills: [Bill]) {
+    init(billId: Int,billDate: Date,billType: String,billAmount: Float,customerId: Int,firstName: String,lastName: String,email: String,arrayBills: [Bill]) {
         self.customerId = customerId
         self.firstName = firstName
         self.lastName = lastName
         self.email = email
         self.arrayBills = arrayBills
+        super.init(billId: billId, billDate: billDate, billType: billType, billAmount: billAmount)
     }
-    
-    var temp: Int = 0
-    func display() {
-//        print("Customer Id: ",customerId!)
-//        print("Full Name: ",fullName)
-//        print("Email: ",email!)
-//        print("----Bill Information----")
-//
-//        if arrayBills!.count == 0 {
-//            print("~~~NOTE : This Customer has no bills")
-//            temp = temp + 1
-//        }else
-//        {
-//        for bill in self.arrayBills! {
-//            bill.display()
-//        }
-//        }
-//        if(temp == 0){
-//        print("********************************")
-//        print("Total Amount to Pay: ",totalBill.dollar())
-//        print("********************************")
-//        }
-//        print("")
-//        print("")
-    }
-    
-    func display(customerId: Int) {
-        print("")
-        print("Customer Id: ",customerId)
-        print("Full Name: ",fullName)
-        print("Email: ",email!)
-    }
+
 }

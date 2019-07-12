@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Hydro: Bill{
+class Hydro: Bill {
     let agencyName: String?
     var unitsConsumed: Float?
     
@@ -18,13 +18,4 @@ class Hydro: Bill{
         super.init(billId: billId, billDate: billDate, billType: billType, billAmount: billAmount)
     }
     
-    override func display() {
-//        print("********************************")
-//        print("\t Bill Id: ",billId!)
-//        print("\t Bill Date: ",billDate!.dateFormat())
-//        print("\t Bill Type: ",billType!)
-//        print("\t Bill Amount: ",billAmount!.dollar())
-//        print("\t Agency Name: ",agencyName!)
-//        print("\t Units Consumed: ",unitsConsumed!.units())
-    }
 }

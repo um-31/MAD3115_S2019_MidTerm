@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Internet: Bill{
+class Internet: Bill {
     let providerName: String?
     var internetUsed: Float?
     
@@ -18,13 +18,4 @@ class Internet: Bill{
         super.init(billId: billId, billDate: billDate, billType: billType, billAmount: billAmount)
     }
     
-    override func display() {
-//        print("********************************")
-//        print("\t Bill Id: ",billId!)
-//        print("\t Bill Date: ",billDate!.dateFormat())
-//        print("\t Bill Type: ",billType!)
-//        print("\t Bill Amount: ",billAmount!.dollar())
-//        print("\t Provide: ",providerName!)
-//        print("\t Data Consumed: ",internetUsed!.gigaByte())
-    }
 }

@@ -40,14 +40,15 @@ class BillViewController: UIViewController {
 }
 extension BillViewController : UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(self.customers.count)
         return self.customers.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customerCellIdentifier") as! tblCellTableViewCell
-        let customer = self.customers[indexPath.row]
-        cell.lblCustomerName.text = String(customer.fullName)
-        
+        for i in customers{
+            cell.lblCustomerName.text = String(i.fullName)
+        }
         return cell
     }
     
