@@ -126,48 +126,53 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hdt-jo-6eL">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bMB-Of-r4I">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="customerCellIdentifier" id="e8e-DI-hCC" customClass="tblCellTableViewCell" customModule="C0752248_MidTerm_MAD3115S2019" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="slS-Ai-HJX" customClass="tblCellTableViewCell" customModule="C0752248_MidTerm_MAD3115S2019" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="e8e-DI-hCC" id="gFA-FL-cC0">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="slS-Ai-HJX" id="dVx-m6-0rv">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A0t-zo-cfh">
-                                                    <rect key="frame" x="11" y="9" width="48" height="24"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mfu-Vh-V2h">
+                                                    <rect key="frame" x="20" y="3" width="374" height="36"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="lblCustomerName" destination="gFA-FL-cC0" id="hKS-Yi-jEJ"/>
+                                            <outlet property="lblCustomerName" destination="Mfu-Vh-V2h" id="1of-t4-8Ey"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="bMB-Of-r4I" secondAttribute="trailing" id="1ui-iv-hwN"/>
+                            <constraint firstAttribute="bottom" secondItem="bMB-Of-r4I" secondAttribute="bottom" id="P6Q-mL-Vu2"/>
+                            <constraint firstItem="bMB-Of-r4I" firstAttribute="leading" secondItem="LWM-yP-FfG" secondAttribute="leading" id="gSx-qb-zQx"/>
+                            <constraint firstItem="bMB-Of-r4I" firstAttribute="top" secondItem="LWM-yP-FfG" secondAttribute="top" id="rdW-A0-1UX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="fH5-gd-Hf4"/>
                     </view>
                     <navigationItem key="navigationItem" id="Bhv-MO-t91">
                         <barButtonItem key="rightBarButtonItem" title="Logout" id="fyg-EZ-iOE"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="tblCustomers" destination="hdt-jo-6eL" id="zpQ-c3-Edp"/>
+                        <outlet property="tableViewCustomers" destination="bMB-Of-r4I" id="Ef0-P9-OcU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XU8-Pi-6Nu" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="DD8-tl-psu" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2602.898550724638" y="129.91071428571428"/>
+            <point key="canvasLocation" x="3513.04347826087" y="129.91071428571428"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HJZ-qX-lyZ">
@@ -186,6 +191,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PVG-nP-gv2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="892.75362318840587" y="129.91071428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="90r-fz-NCQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oUO-og-UdS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Q0Y-bc-fa7">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vaK-4k-dkh" kind="relationship" relationship="rootViewController" id="ZzH-5p-c4j"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3vn-ae-9Af" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2602.898550724638" y="129.91071428571428"/>
         </scene>
     </scenes>
 </document>

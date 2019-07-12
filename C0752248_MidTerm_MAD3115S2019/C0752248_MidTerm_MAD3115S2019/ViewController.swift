@@ -47,7 +47,7 @@ class ViewController: UIViewController {
             {
                 let userDefault = UserDefaults.standard
                 let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-                let  userVC = storyBoard.instantiateViewController(withIdentifier: "BillListIdentifier") as! BillViewController
+                let  userVC = storyBoard.instantiateViewController(withIdentifier: "BillListIdentifier") as! BillTableViewController
                 self.present(userVC, animated: true, completion: nil)
                 
                 if switchRemember.isOn{
@@ -66,7 +66,7 @@ class ViewController: UIViewController {
         }
     }
     @IBAction func unWindLogoutFromAnyScreen(storyboardSegue: UIStoryboardSegue) {
-        let s = storyboardSegue.source as! BillViewController
+        let s = storyboardSegue.source as! BillTableViewController
         txtPassword.text = ""
         txtUsername.text = ""
     }

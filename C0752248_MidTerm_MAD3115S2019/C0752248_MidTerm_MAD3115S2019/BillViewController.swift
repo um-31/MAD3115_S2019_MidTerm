@@ -8,52 +8,37 @@
 
 import UIKit
 
-class BillViewController: UITableViewController {
+class BillViewController: UIViewController {
 
-    @IBOutlet weak var tblCustomers: UITableView!
-    
-    var customers = [Customer]()
+    @IBOutlet weak var tableViewCustomers: UITableView!
+    var customers: [Customer] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.tblCustomers.dataSource = self
-//        self.tblCustomers.delegate = self
-
-        // Do any additional setup after loading the view.
+        customers = custArray()
+        self.tableViewCustomers.dataSource = self
+        self.tableViewCustomers.delegate = self
     }
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+    func custArray() -> [Customer]{
+        var tempCust: [Customer] = []
+        let c1:Customer = Customer.init(customerId: 111, firstName: "Udhay", lastName: "Mahajan", email: "udaymahajan0@gmail.com", arrayBills: [])
+        let c2:Customer = Customer.init(customerId: 112, firstName: "Ujwal", lastName: "Arora", email: "ujwalaroa@gmail.com", arrayBills: [])
+        
+        tempCust.append(c1)
+        tempCust.append(c2)
+        
+        return tempCust
+    }
+}
+extension BillViewController : UITableViewDataSource, UITableViewDelegate{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return customers.count
     }
 
-//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return CGFloat(100)
-//    }
-    
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-//}
-//extension BillViewController : UITableViewDataSource, UITableViewDelegate{
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        print(self.customers.count)
-//        return self.customers.count
-//    }
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cust = customers[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "customerCellIdentifier", for: indexPath) as! tblCellTableViewCell
-//        for i in customers{
-//            cell.lblCustomerName.text = String(i.fullName)
-//        }
+        cell.setLable(customer: cust)
         return cell
     }
-    
+
 }
