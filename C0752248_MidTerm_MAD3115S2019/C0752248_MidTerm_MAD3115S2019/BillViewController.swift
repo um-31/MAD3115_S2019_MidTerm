@@ -8,21 +8,25 @@
 
 import UIKit
 
-class BillViewController: UIViewController {
+class BillViewController: UITableViewController {
 
     @IBOutlet weak var tblCustomers: UITableView!
     
-    var customers = [c1,c2,c3,c4]
+    var customers = [Customer]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tblCustomers.dataSource = self
-        self.tblCustomers.delegate = self
+//        self.tblCustomers.dataSource = self
+//        self.tblCustomers.delegate = self
 
         // Do any additional setup after loading the view.
     }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return CGFloat(100)
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
     }
+
+//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return CGFloat(100)
+//    }
     
     
     
@@ -37,20 +41,19 @@ class BillViewController: UIViewController {
     }
     */
 
-}
-extension BillViewController : UITableViewDataSource, UITableViewDelegate{
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(self.customers.count)
-        return self.customers.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "customerCellIdentifier") as! tblCellTableViewCell
-        for i in customers{
-            cell.lblCustomerName.text = String(i.fullName)
-        }
+//}
+//extension BillViewController : UITableViewDataSource, UITableViewDelegate{
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        print(self.customers.count)
+//        return self.customers.count
+//    }
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "customerCellIdentifier", for: indexPath) as! tblCellTableViewCell
+//        for i in customers{
+//            cell.lblCustomerName.text = String(i.fullName)
+//        }
         return cell
     }
-    
     
 }
