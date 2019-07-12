@@ -13,8 +13,10 @@ class CustomerBillViewController: UIViewController {
     @IBOutlet weak var lblCustomerId: UILabel!
     @IBOutlet weak var lblCustomerName: UILabel!
     @IBOutlet weak var lblTotal: UILabel!
+    var cust: Customer?
     override func viewDidLoad() {
         super.viewDidLoad()
+        lblCustomerName.text = cust?.fullName
 
         // Do any additional setup after loading the view.
     }

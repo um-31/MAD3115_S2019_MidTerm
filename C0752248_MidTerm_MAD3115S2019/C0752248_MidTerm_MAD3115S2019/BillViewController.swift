@@ -50,5 +50,10 @@ extension BillViewController : UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "showDetails", sender: self)
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? CustomerBillViewController{
+            destination.cust = customers[(tableViewCustomers.indexPathForSelectedRow?.row)!]
+        }
+    }
 
 }
