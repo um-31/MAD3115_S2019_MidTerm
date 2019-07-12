@@ -10,6 +10,7 @@ import UIKit
 
 class tblCellTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var lblCustomerName: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,5 +21,4 @@ class tblCellTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
 }

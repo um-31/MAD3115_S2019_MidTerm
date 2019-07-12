@@ -28,15 +28,15 @@ class ViewController: UIViewController {
             
         }
     }
-//    private func getRememberMeValues() {
-//        let userDefault = UserDefaults.standard
-//        if let email = userDefault.string(forKey: "userEmail") {
-//            txtUsername.text = email
-//            if let pwd = userDefault.string(forKey: "userPassword") {
-//                txtPassword.text = pwd
-//            }
-//        }
-//    }
+    private func getRememberMeValues() {
+        let userDefault = UserDefaults.standard
+        if let email = userDefault.string(forKey: "userEmail") {
+            txtUsername.text = email
+            if let pwd = userDefault.string(forKey: "userPassword") {
+                txtPassword.text = pwd
+            }
+        }
+    }
     
     @IBAction func btnLogin(_ sender: UIBarButtonItem) {
         checkLogin()

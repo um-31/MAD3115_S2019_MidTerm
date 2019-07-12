@@ -19,12 +19,12 @@ class Hydro: Bill{
     }
     
     override func display() {
-        print("********************************")
-        print("\t Bill Id: ",billId!)
-        print("\t Bill Date: ",billDate!.dateFormat())
-        print("\t Bill Type: ",billType!)
-        print("\t Bill Amount: ",billAmount!.dollar())
-        print("\t Agency Name: ",agencyName!)
-        print("\t Units Consumed: ",unitsConsumed!.units())
+//        print("********************************")
+//        print("\t Bill Id: ",billId!)
+//        print("\t Bill Date: ",billDate!.dateFormat())
+//        print("\t Bill Type: ",billType!)
+//        print("\t Bill Amount: ",billAmount!.dollar())
+//        print("\t Agency Name: ",agencyName!)
+//        print("\t Units Consumed: ",unitsConsumed!.units())
     }
 }

@@ -36,27 +36,27 @@ class Customer: IDisplay{
     
     var temp: Int = 0
     func display() {
-        print("Customer Id: ",customerId!)
-        print("Full Name: ",fullName)
-        print("Email: ",email!)
-        print("----Bill Information----")
-        
-        if arrayBills!.count == 0 {
-            print("~~~NOTE : This Customer has no bills")
-            temp = temp + 1
-        }else
-        {
-        for bill in self.arrayBills! {
-            bill.display()
-        }
-        }
-        if(temp == 0){
-        print("********************************")
-        print("Total Amount to Pay: ",totalBill.dollar())
-        print("********************************")
-        }
-        print("")
-        print("")
+//        print("Customer Id: ",customerId!)
+//        print("Full Name: ",fullName)
+//        print("Email: ",email!)
+//        print("----Bill Information----")
+//
+//        if arrayBills!.count == 0 {
+//            print("~~~NOTE : This Customer has no bills")
+//            temp = temp + 1
+//        }else
+//        {
+//        for bill in self.arrayBills! {
+//            bill.display()
+//        }
+//        }
+//        if(temp == 0){
+//        print("********************************")
+//        print("Total Amount to Pay: ",totalBill.dollar())
+//        print("********************************")
+//        }
+//        print("")
+//        print("")
     }
     
     func display(customerId: Int) {

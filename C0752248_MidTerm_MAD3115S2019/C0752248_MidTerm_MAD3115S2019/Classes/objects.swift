@@ -1,8 +1,8 @@
 //
-//  main.swift
-//  C0752248_MID_TERM_MAD3004
+//  objects.swift
+//  C0752248_MidTerm_MAD3115S2019
 //
-//  Created by hhh on 2019-06-20.
+//  Created by hhh on 2019-07-12.
 //  Copyright © 2019 hhh. All rights reserved.
 //
 
@@ -33,6 +33,4 @@ var c3:Customer = Customer.init(customerId: 113, firstName: "Vipul", lastName: "
 //c3.display()
 var c4:Customer = Customer.init(customerId: 114, firstName: "Rajvinder", lastName: "Sidhu", email: "rajsidhu@gmail.com", arrayBills: [])
 //c4.display()
-
-c1.display(customerId: 111)
-c2.display(customerId: 114)
+//var customers = [c1,c2,c3,c4]
