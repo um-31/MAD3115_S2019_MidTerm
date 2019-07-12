@@ -16,7 +16,9 @@ class CustomerBillViewController: UIViewController {
     var cust: Customer?
     override func viewDidLoad() {
         super.viewDidLoad()
-        lblCustomerName.text = cust?.fullName
+        lblCustomerId.text = "Customer Id: \((cust?.customerId)!)"
+        lblCustomerName.text = "Customer Name: \((cust?.fullName)!)"
+        lblTotal.text = "Total Amount: \((cust?.totalBill)!)"
 
         // Do any additional setup after loading the view.
     }
