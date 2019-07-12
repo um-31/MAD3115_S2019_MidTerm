@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var txtUsername: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
     @IBOutlet weak var switchRemember: UISwitch!
+    var count = 0
     var userList = [String:String]()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,11 +44,11 @@ class ViewController: UIViewController {
     }
     func checkLogin() {
         for (k,v) in userList {
-            if self.txtUsername.text == k && self.txtPassword.text == v
+            if txtUsername.text == k && txtPassword.text == v
             {
                 let userDefault = UserDefaults.standard
                 let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-                let  userVC = storyBoard.instantiateViewController(withIdentifier: "BillListIdentifier") as! BillTableViewController
+                let  userVC = storyBoard.instantiateViewController(withIdentifier: "BillListIdentifier") as! BillViewController
                 self.present(userVC, animated: true, completion: nil)
                 
                 if switchRemember.isOn{
@@ -57,16 +58,18 @@ class ViewController: UIViewController {
                     userDefault.removeObject(forKey: "userEmail")
                     userDefault.removeObject(forKey: "userPassword")
                 }
-            }else {
-                let alert = UIAlertController(title: "Error", message: "Invalid Username or Password", preferredStyle: .alert)
-                let okButton = UIAlertAction(title: "Ok", style: .default, handler: nil)
-                alert.addAction(okButton)
-                self.present(alert, animated: true)
+                count = count + 1
             }
+        }
+        if count == 0 {
+            let alert = UIAlertController(title: "Error", message: "Invalid Username or Password", preferredStyle: .alert)
+            let okButton = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            alert.addAction(okButton)
+            self.present(alert, animated: true)
         }
     }
     @IBAction func unWindLogoutFromAnyScreen(storyboardSegue: UIStoryboardSegue) {
-        let s = storyboardSegue.source as! BillTableViewController
+        let s = storyboardSegue.source as! BillViewController
         txtPassword.text = ""
         txtUsername.text = ""
     }
